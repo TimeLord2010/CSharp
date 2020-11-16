@@ -19,7 +19,7 @@ static class StringHelper {
         /// </summary>
         Substitution,
         /// <summary>
-        /// This mode will start replacing characters until the new value is fully inserted. (Possible left overs from old value) 
+        /// This mode will start replacing characters until the new value is fully inserted. (Possible left overs from old value)
         /// </summary>
         Partial
     }
@@ -120,6 +120,13 @@ static class StringHelper {
 
     public static bool IsDigit(char input) => input >= '0' && input <= '9';
 
+      public static char PopEnd(ref string input) {
+        if (input.Length == 0) return '\n';
+        var last = input.Last();
+        input = input.Substring(0, input.Length - 1);
+        return last;
+    }
+
     public static string Print<T>(T[,] matrix, string[] columnLabels = null) {
         string result = "";
         int maxSize = 0;
@@ -218,3 +225,4 @@ static class StringHelper {
     //}
 
 }
+

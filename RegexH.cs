@@ -17,7 +17,7 @@ public static class RegexH {
         Patterns.Add(EPatterns.NewLine, "\r\n?|\n");
         Patterns.Add(EPatterns.Integer, "[0-9]+");
         Patterns.Add(EPatterns.Double, $"{Patterns[EPatterns.Integer]}(\\.{Patterns[EPatterns.Integer]})?");
-        Patterns.Add(EPatterns.PTBR_Alphabet_Char, "([a-zA-ZçÇ]|[áÁãÃâÂàÀ]|[íÍ]|[éÉêÊ]|[óÓ]|[úÚ])");
+        Patterns.Add(EPatterns.PTBR_Alphabet_Char, "([a-zA-Zï¿½ï¿½]|[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½]|[ï¿½ï¿½]|[ï¿½ï¿½ï¿½ï¿½]|[ï¿½ï¿½]|[ï¿½ï¿½])");
         Patterns.Add(EPatterns.CPF, @"[0-9]{3}(\.[0-9]{3}){2}-[0-9]{1,2}");
         return Patterns;
     }
